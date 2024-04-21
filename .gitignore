@@ -25,7 +25,8 @@ dist-ssr
 
 # python
 venv/*
-
+__pycache__/*
+*.pyc
 #sqlite
 *.sqlite3
 
