@@ -28,3 +28,7 @@ venv/*
 
 #sqlite
 *.sqlite3
+
+# sensitive files
+secret.json
+.env*
