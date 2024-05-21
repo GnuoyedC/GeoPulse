@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EventDashboardConfig(AppConfig):
+class NewsDataConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "event_dashboard"
+    name = "geopulse.news_data"

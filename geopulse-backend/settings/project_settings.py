@@ -9,18 +9,16 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
-from pathlib import Path
-
+from settings.config import Config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+# load configs.
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-)53&j4v7zx3ek!eli%a3o$%s5(u724=__0muo_q7$wazd!qfcy"
+SECRET_KEY = Config.DJANGO().get('SECRET','no_secret_key')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +36,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "geopulse.news_data",
+    "geopulse.news_dashboard",
+    "geopulse.analysis",
 ]
 
 MIDDLEWARE = [
@@ -50,7 +51,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "geopulse_drf.urls"
+ROOT_URLCONF = "geopulse.urls"
 
 TEMPLATES = [
     {
@@ -68,19 +69,21 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "geopulse_drf.wsgi.application"
+WSGI_APPLICATION = "geopulse.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": Config.DB().get('ENGINE','default_db_engine'),
+        "NAME": Config.DB().get('NAME','default_db_name'),
+        "USER": Config.DB().get('USER','default_db_user'),
+        "PASSWORD": Config.DB().get('PASSWORD','default_db_password'),
+        "HOST": Config.DB().get('HOST','default_db_host'),
+        "PORT": Config.DB().get('PORT','default_db_port'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
