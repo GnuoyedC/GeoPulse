@@ -1,6 +1,6 @@
 import requests
 import json
-from exceptions.json_handler_exceptions import (
+from common.exceptions.json_handler_exceptions import (
     NoJsonUrlProvided,
     JsonResponseError
 )

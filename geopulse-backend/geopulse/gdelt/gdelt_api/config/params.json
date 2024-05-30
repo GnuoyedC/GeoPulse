@@ -1,0 +1,32 @@
+{
+    "API_TYPE": {
+            "geo":"geo/geo",
+            "tv":"tv/tv/",
+            "doc":"doc/doc",
+            "timeline":"timeline/timeline",
+            "vision":"gdeltvision/gdeltvision"
+    },
+    "PARAMS": {
+        "sourcelang": "sourcelang:",
+        "theme": "theme:",
+        "sourcecountry": "sourcecountry:",
+        "mode": "mode=",
+        "timespan": "timespan=",
+        "format": "format=",
+        "tone": "tone",
+        "sortby": "sortby="
+    },
+    "RESULTS_FORMAT": {
+        "interactive": "HTML",
+        "imghtml": "ImageHTML",
+        "showcase": "ImageHTMLShow",
+        "geojson": "GeoJSON",
+        "imggeo": "ImageGeoJSON",
+        "rss": "RSS",
+        "socialrss": "ImageRSS",
+        "imgjson": "ImageJSONFeed",
+        "rawcsv": "CSV",
+        "socialcsv": "ImageCSV"
+    },
+    "QUERY_STEM": "?query="
+}

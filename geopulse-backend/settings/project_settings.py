@@ -36,9 +36,15 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "geopulse.news_data",
+    "common",
+    "geopulse",
+    "geopulse.gdelt",
+    "geopulse.gdelt.gdelt_api",
+    "geopulse.gdelt.geopulse_gdelt",
+    "geopulse.events_data",
     "geopulse.news_dashboard",
     "geopulse.analysis",
+    "geopulse.updaters",
 ]
 
 MIDDLEWARE = [

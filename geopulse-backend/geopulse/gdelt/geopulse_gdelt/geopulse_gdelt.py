@@ -5,7 +5,7 @@ from pathlib import Path
     the GDELT 2.0 API and transferring it
     to the database.
 """
-from gdelt_api_handler import GDELTAPI as api
+from geopulse.gdelt.gdelt_api.gdelt_api import GdeltAPI as api
 
 class GeopulseGDELTHandler:
     @classmethod
