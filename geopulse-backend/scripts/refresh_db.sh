@@ -18,7 +18,7 @@ cat lastupdate.txt >> "$TEMP_DIR/$HISTORY"
 for URL in $EXPORT_URLS; do
     # Get the file name from the URL
     FILE_NAME=$(basename $URL)
-    
+
     # Download the zip file
     curl -s -o $TEMP_DIR/$FILE_NAME $URL
 

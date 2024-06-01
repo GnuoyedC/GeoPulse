@@ -1,5 +1,4 @@
 from django.db import models
-
 class GeoFlashpointRisk(models.Model):
     EVENT_ID = models.BigIntegerField(primary_key=True)
     EVENT_YYYYMMDD = models.DateField()
@@ -23,7 +22,7 @@ class GeoFlashpointRisk(models.Model):
     TARGET_ETHNIC_CODE = models.CharField(max_length=10, null=True, blank=True)
     TARGET_RELIGION1_CODE = models.CharField(max_length=10, null=True, blank=True)
     TARGET_RELIGION2_CODE = models.CharField(max_length=10, null=True, blank=True)
-    TARGET_TYPE_CODE = models.CharField(max_length=10, null=True, blank=True)
+    TARGET_TYPE1_CODE = models.CharField(max_length=10, null=True, blank=True)
     TARGET_TYPE2_CODE = models.CharField(max_length=10, null=True, blank=True)
     TARGET_TYPE3_CODE = models.CharField(max_length=10, null=True, blank=True)
     IS_EVENT_ORIGIN = models.BooleanField()

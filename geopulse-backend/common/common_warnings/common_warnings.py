@@ -1,10 +1,10 @@
 import warnings
 
 # Define warning types
-EVENT_EXISTS = 'EVENT_EXISTS'
+DIR_NOT_EXISTS = 'DIR_NOT_EXISTS'
 # Define a mapping of warning types to messages
 WARNING_MESSAGES = {
-    EVENT_EXISTS: 'An event item with this ID already exists.',
+    DIR_NOT_EXISTS: 'Provided directory does not exist.',
 }
 
 def ShowWarning(warning_type:str) -> None:

@@ -1,10 +1,10 @@
-from geopulse.gdelt.gdelt_api.config.config_handler import ConfigHandler as cfg
+from geopulse.gdelt.gdelt_api.config.config import Config
 class ParamsUtils:
-    API_TYPE_PARAMS = cfg.get_params_config()['API_TYPE']
-    RESULTS_FORMATS_PARAMS = cfg.get_params_config()['RESULTS_FORMAT']
-    PARAMS = cfg.get_params_config()['PARAMS']
-    QUERY_STEM = cfg.get_params_config()['QUERY_STEM']
-    DEFAULT_PARAMS_DICT = { 
+    API_TYPE_PARAMS = Config.get_params_config()['API_TYPE']
+    RESULTS_FORMATS_PARAMS = Config.get_params_config()['RESULTS_FORMAT']
+    PARAMS = Config.get_params_config()['PARAMS']
+    QUERY_STEM = Config.get_params_config()['QUERY_STEM']
+    DEFAULT_PARAMS_DICT = {
         "sourcelang": "eng",
         "theme": "ARMEDCONFLICT",
         "sourcecountry": "US",
@@ -43,7 +43,7 @@ class ParamsUtils:
             Determines the character to join the parameters together
             with depending on the param-value separator present
             within the param-value string.
-            
+
             Args:
                 param_prefix (str): the param identifier (i.e. 'sourcelang:')
             Returns:
@@ -65,7 +65,7 @@ class ParamsUtils:
         """
         themes = []
         if not theme_list:
-            themes = cfg.get_themes_config()['ALL']
+            themes = Config.get_themes_config()['ALL']
         themes = "(" + " OR ".join([theme for theme in themes]) + ")"
         return themes
     @classmethod
@@ -74,7 +74,7 @@ class ParamsUtils:
             Using the passed parameter, the function
             checks against the class variable PARAMS
             to identify the parameter prefix.
-            
+
             Args:
                 param (str): The parameter to check the PARAMS dict against.
             Returns:
@@ -120,4 +120,4 @@ class ParamsUtils:
         for param,value in cls.DEFAULT_PARAMS_DICT.items():
             cls.set_param_value(param,value)
         return cls.PARAMS_LIST
-        
+

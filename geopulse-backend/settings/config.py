@@ -17,15 +17,15 @@ class Config:
     @classmethod
     def API(cls):
         return cls.API_CONF
-    
+
     @classmethod
     def DB(cls):
         return cls.DB_CONF
-    
+
     @classmethod
     def DEV(cls):
         return cls.DEV_CONF
-    
+
     @classmethod
     def DJANGO(cls):
         return cls.DJANGO_CONF

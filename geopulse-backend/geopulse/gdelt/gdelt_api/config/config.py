@@ -4,7 +4,7 @@ from typing import Dict, Any
 from common.json_handler import JsonHandler as jsh
 from common.file_handler import FileHandler as fh
 
-class ConfigHandler:
+class Config:
     CURRENT_DIRECTORY = fh.get_filepath_directory(__file__)
     CONF_FILETYPE = "json"
     CONFIG_FILES = [os.path.splitext(os.path.basename(x))[0] for x in glob.glob(os.path.join(CURRENT_DIRECTORY, f"*.{CONF_FILETYPE}"))]
@@ -57,8 +57,7 @@ class ConfigHandler:
         return cls.get_config_file("themes")
 
 if __name__ == '__main__':
-    params_config = ConfigHandler.get_params_config()
+    params_config = Config.get_params_config()
     print(params_config)
-    themes_config = ConfigHandler.get_themes_config()
+    themes_config = Config.get_themes_config()
     print(themes_config)
-

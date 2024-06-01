@@ -1,4 +1,4 @@
-from geopulse.gdelt.gdelt_api.config.config_handler import ConfigHandler as config
+from geopulse.gdelt.gdelt_api.config.config import Config as cfg
 from geopulse.gdelt.gdelt_api.utils.params_util import ParamsUtils as paramsutil
 class UrlUtils:
     BASE_URL = "https://api.gdeltproject.org/api/v2"

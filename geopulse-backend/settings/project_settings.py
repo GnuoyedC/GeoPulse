@@ -39,10 +39,9 @@ INSTALLED_APPS = [
     "common",
     "geopulse",
     "geopulse.gdelt",
-    "geopulse.gdelt.gdelt_api",
     "geopulse.gdelt.geopulse_gdelt",
+    "geopulse.gdelt.gdelt_api",
     "geopulse.events_data",
-    "geopulse.news_dashboard",
     "geopulse.analysis",
     "geopulse.updaters",
 ]

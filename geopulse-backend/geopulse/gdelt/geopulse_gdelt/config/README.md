@@ -40,6 +40,7 @@ a higher level of organization or intent.
 | CAMEO Code  | Description |
 | ------------- | ------------- |
 | 18  | Engage in unconventional mass violence  |
+| 180 | Use conventional violence. |
 | 181 | Engage in unconventional mass violence (other)  |
 | 182 | Abduction or hijacking |
 | 183 | Physical Assault  |
@@ -57,5 +58,3 @@ Actor codes are used to identify event participants.
 | MIL | (Military Forcs) Represents formal military organizations, including the army, navy, air force, and other defense forces. |
 | COP | (Police Forces) Refers to law enforcement agencies, including local police, federal police, and other security forces. |
 | TERR | (Terrorist Organizations) Represents groups that engage in acts of terrorism, often targeting civilians and using violence to achieve political aims. |
-| NGO | (Non-Government Organizations)  Refers to non-profit groups that operate independently of government, often involved in humanitarian efforts. |
-| MED | (Media Organizations) Includes news agencies, journalists, and media outlets that report on events and incidents. |
